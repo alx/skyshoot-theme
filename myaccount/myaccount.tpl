@@ -12,6 +12,7 @@ View::Header();
 <div class="block">
 
     <div id="myaccount-left">
+        <?php if($user-role == 1) { ?><div><a href="/cc-admin">Admin</a></div><?php } ?>
         <div>
             <div class="avatar"><span><img alt="<?=$user->username?>" src="<?=$user->avatar_url?>" /></span></div>
             <a href="<?=HOST?>/myaccount/profile/#update-avatar"><?=Language::GetText('edit_avatar')?></a>
